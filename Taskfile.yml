@@ -1,0 +1,25 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
+
+  build-image:
+    cmds:
+      - nerdctl build -t custom-errors:latest .
+
+  tag:
+    cmds:
+     - nerdctl tag custom-errors:latest harbor.thurlow.house/registry/custom-errors:latest
+
+
+  push:
+    cmds:
+     - nerdctl push --insecure-registry harbor.thurlow.house/registry/custom-errors:latest

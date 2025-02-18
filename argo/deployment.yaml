@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custom-errors
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: custom-errors
+  template:
+    metadata:
+      labels:
+        app: custom-errors
+    spec:
+      containers:
+      - image: harbor.thurlow.house/registry/custom-errors:latest
+        name: custom-errors
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 500m
+            memory: 1G
+      resources:
+        limits:
+          cpu: 500m
+          memory: 1G
