@@ -13,6 +13,8 @@ spec:
       labels:
         app: custom-errors
     spec:
+      nodeSelector:
+        kubernetes.io/hostname: rk1.thurlow.house
       containers:
       - image: harbor.thurlow.house/registry/custom-errors:latest
         name: custom-errors
