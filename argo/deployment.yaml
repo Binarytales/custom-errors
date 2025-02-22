@@ -24,7 +24,7 @@ spec:
           limits:
             cpu: 500m
             memory: 1G
-      resources:
-        limits:
-          cpu: 500m
-          memory: 1G
+      # resources:
+      #   limits:
+      #     cpu: 500m
+      #     memory: 1G

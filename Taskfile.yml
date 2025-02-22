@@ -13,7 +13,7 @@ tasks:
 
   build-image:
     cmds:
-      - nerdctl build -t custom-errors:latest .
+      - nerdctl build --platform=amd64,arm64 -t custom-errors:latest .
 
   tag:
     cmds:
@@ -22,4 +22,4 @@ tasks:
 
   push:
     cmds:
-     - nerdctl push --insecure-registry harbor.thurlow.house/registry/custom-errors:latest
+     - nerdctl push --all-platforms harbor.thurlow.house/registry/custom-errors:latest
