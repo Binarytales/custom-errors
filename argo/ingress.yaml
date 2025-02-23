@@ -10,5 +10,5 @@ spec:
     - match: Host("errors.thurlow.house")
       kind: Rule
       services:
-      - name: whoami
+      - name: custom-errors
         port: 80
