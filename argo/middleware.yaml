@@ -5,8 +5,8 @@ metadata:
 spec:
   errors:
     status:
-      - "400-599"
-    query: /{status}
+      - "404"
+    query: /404.html
     service:
       name: custom-errors
       port: 80
