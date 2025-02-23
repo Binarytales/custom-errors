@@ -1,23 +1,23 @@
 [
 	{
-		"id": "100"
+		"id": "100", "message": "Status"
 	},
 	{
-		"id": "200"
+		"id": "200", "message": "OK"
 	},
 	{
-		"id": "300"
+		"id": "300", "message": "Redirect"
 	},
 	{
-		"id": "400"
+		"id": "400", "message": "Client Error"
 	},
 	{
-		"id": "404"
+		"id": "404", "message": "Not Found"
 	},
 	{
-		"id": "not-found"
+		"id": "not-found", "message": "Not Found"
 	},
 	{
-		"id": "500"
+		"id": "500", "message": "Sever Error"
 	}
 ]

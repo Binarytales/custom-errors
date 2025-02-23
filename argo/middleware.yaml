@@ -6,7 +6,7 @@ spec:
   errors:
     status:
       - "400-599"
-    query: /errors/{status}/
+    query: /{status}
     service:
       name: custom-errors
       port: 80
