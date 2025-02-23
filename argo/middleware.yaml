@@ -5,11 +5,7 @@ metadata:
 spec:
   errors:
     status:
-      - "400"
-      - "404"
-      - "401-499"
-      - "500"
-      - "501-599"
+      - "400-599"
     query: /errors/{status}/
     service:
       name: custom-errors
