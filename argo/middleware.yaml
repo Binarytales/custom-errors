@@ -6,7 +6,8 @@ spec:
   errors:
     status:
       - "404"
-    query: /404.html
+      - "500"
+    query: /{status}.html
     service:
       name: custom-errors
       port: 80
