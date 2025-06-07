@@ -1,19 +1,24 @@
 ---
-import '../styles/global.css'
+
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Internal System Error</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>HomeLab Traefik Error</title>
+  </head>
+  <style type="text/css">
+    @import "tailwindcss";
 
-		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-	</head>
-	<body class="h-screen dark">
-		<slot />
-	</body>
+    @theme {
+      --font-sans: "FairFax HD", sans-serif;
+    }
+
+    @custom-variant dark (&:where(.dark, .dark *));
+  </style>
+  <body class="h-100v dark m-0">
+    <slot />
+  </body>
 </html>

@@ -1,20 +1,20 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-import Card from '../components/Card.astro';
-import Layout from '../layouts/Layout.astro';
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  const errors = await getCollection('errors');
-  return errors.map(error => ({
+  const errors = await getCollection("errors");
+  return errors.map((error) => ({
     params: { id: error.id },
     props: { error },
   }));
 }
-// 2. For your template, you can get the entry directly from the prop
-const { error } = Astro.props;
 
+const { error } = Astro.props;
 ---
+
 <Layout>
-	<Card code={error.data.id} shortMessage={error.data.message}/>
+  <Card code={error.data.id} shortMessage={error.data.message} />
 </Layout>

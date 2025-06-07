@@ -1,25 +1,27 @@
 # https://taskfile.dev
-
-version: '3'
-
-vars:
-  GREETING: Hello, World!
+version: "3"
 
 tasks:
   default:
     cmds:
-      - echo "{{.GREETING}}"
-    silent: true
+      - task --list-all
 
   build-image:
     cmds:
       - nerdctl build --platform=amd64,arm64 -t custom-errors:latest .
 
+  docker-build-image:
+    cmds:
+      - docker build --platform=linux/amd64,linux/arm64 -t harbor.thurlow.house/registry/custom-errors:latest .
+
   tag:
     cmds:
-     - nerdctl tag custom-errors:latest harbor.thurlow.house/registry/custom-errors:latest
-
+      - nerdctl tag custom-errors:latest harbor.thurlow.house/registry/custom-errors:latest
 
   push:
     cmds:
-     - nerdctl push --all-platforms harbor.thurlow.house/registry/custom-errors:latest
+      - nerdctl push --all-platforms harbor.thurlow.house/registry/custom-errors:latest
+
+  docker-push:
+    cmds:
+      - docker push harbor.thurlow.house/registry/custom-errors:latest

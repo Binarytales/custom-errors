@@ -16,15 +16,14 @@ spec:
       nodeSelector:
         kubernetes.io/hostname: rk1.thurlow.house
       containers:
-      - image: harbor.thurlow.house/registry/custom-errors:latest
-        name: custom-errors
-        ports:
-        - containerPort: 80
-        resources:
-          limits:
-            cpu: 500m
-            memory: 1G
-      # resources:
-      #   limits:
-      #     cpu: 500m
-      #     memory: 1G
+        - image: harbor.thurlow.house/registry/custom-errors:latest
+          name: custom-errors
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: 1
+              memory: 2G
+            requests:
+              cpu: 500m
+              memory: 1G
